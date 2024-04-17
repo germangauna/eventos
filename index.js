@@ -182,22 +182,49 @@
 // crear un formulario con un arreglo
 
 
- let ropa = [];
+//  let ropa = [];
 
-let formulario = document.getElementById("formulario");
-let contenedor = document.getElementById("contenedor");
+// let formulario = document.getElementById("formulario");
+// let contenedor = document.getElementById("contenedor");
 
-formulario.addEventListener("submit", (e) => {
-	e.preventDefault();
-	let inputs = e.target.children;
-	ropa.push(inputs[0].value);
+// formulario.addEventListener("submit", (e) => {
+// 	e.preventDefault();
+// 	let inputs = e.target.children;
+// 	ropa.push(inputs[0].value);
 
 
-ropa.forEach( item => {
-	let div = document.createElement("div");
-	div.innerHTML = item;
-	contenedor.append(div);
+// ropa.forEach( item => {
+// 	let div = document.createElement("div");
+// 	div.innerHTML = item;
+// 	contenedor.append(div);
 
-})
-});
+// })
+// });
 
+//arreglo con un objeto
+
+// let arreglo = [];
+
+// let obj = {
+//     id: arreglo.length +1
+// }
+
+// console.log(obj);
+
+// nos dara como resultado [ id: 1] ; me agrego un objeto al arreglo
+
+
+let arreglo = [];
+
+let obj = {
+    id: arreglo.length +1
+}
+
+arreglo.push(obj);
+    let obj1 = {
+        id: arreglo.length + 1
+}
+
+arreglo.push(obj1);
+
+console.log(arreglo);

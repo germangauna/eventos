@@ -154,21 +154,50 @@
 // podemos ponerle mas dinamica con un if, donde si no tiene @ el campo de mail, se borre el input
 
 
+// let formulario = document.getElementById("formulario");
+// formulario.addEventListener("submit", (e) => {
+//     e.preventDefault();// este punto es escensial
+//     let inputs = e.target.children;//traigo el valor de los inputs
+//    if (!inputs[0].value.includes("@")) {
+//         inputs[0].value = "";
+//    }
+//        console.log(inputs[0].value);
+//        console.log(inputs[1].value);
+// })
+
+//Lo podemos hacer con un arreglo
+
+
+
+
+
+// let formulario = document.getElementById("formulario");
+// formulario.addEventListener("submit", (e) => {
+//     e.preventDefault();// este punto es escensial
+//     let inputs = e.target.children;
+
+// })
+
+
+// crear un formulario con un arreglo
+
+
+ let ropa = [];
+
 let formulario = document.getElementById("formulario");
+let contenedor = document.getElementById("contenedor");
+
 formulario.addEventListener("submit", (e) => {
-    e.preventDefault();// este punto es escensial
-    let inputs = e.target.children;//traigo el valor de los inputs
-   if (!inputs[0].value.includes("@")) {
-        inputs[0].value = "";
-   }
-       console.log(inputs[0].value);
-       console.log(inputs[1].value);
+	e.preventDefault();
+	let inputs = e.target.children;
+	ropa.push(inputs[0].value);
+
+
+ropa.forEach( item => {
+	let div = document.createElement("div");
+	div.innerHTML = item;
+	contenedor.append(div);
+
 })
-
-
-
-
-
-
-
+});
 
